@@ -1,5 +1,11 @@
-salaries = [32000, 29000, 48000, 12000, 67000, 50000]
+#input salaries from user 
+salaries = input("Enter salaries separated by spaces: ")
 
+#seperate the salaries and convert them to integers
+salaries = list(map(int, salaries.split()))
+
+
+#bubblew sort function to sort the salaries in ascending order
 def bubble_sort(salaries):
     n = len(salaries)
 
@@ -13,6 +19,7 @@ def bubble_sort(salaries):
 
     return salaries
 
+#selection sort function to sort the salaries in ascending order
 def selection_sort(salaries):
     n = len(salaries)
 
@@ -28,11 +35,11 @@ def selection_sort(salaries):
     return salaries
 
 
-
+#sort the salaries using bubble sort and selection sort
 bubble_sorted = bubble_sort(salaries.copy())
 selection_sorted = selection_sort(salaries.copy())
 
-
+#print("\nOriginal Salaries:")
 print("Bubble Sort (Ascending):")
 print(bubble_sorted)
 
