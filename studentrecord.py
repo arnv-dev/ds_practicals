@@ -1,6 +1,6 @@
 #student record management system using singly linked list 
 
-from Queue import menu
+
 
 
 class StudentNode:
@@ -80,7 +80,7 @@ class StudentLinkedList:
             print(f"Roll No: {s[0]}, Name: {s[1]}, Marks: {s[2]}")
 
     # Menu to interact with the system
-    def menu():
+def menu():
         system = StudentLinkedList()
         while True:
             print("\n---STUDENT RECORD MANAGEMENT MENU---")
@@ -118,6 +118,7 @@ class StudentLinkedList:
                 ascending_input = input("Sort order (asc/desc): ").strip().lower()
                 ascending = True if ascending_input == "asc" else False
                 system.display_students(sort_by=sort_by, ascending=ascending)
+
 
             elif choice == '6':
                 print("Exiting the system.")
